@@ -1,0 +1,33 @@
+{
+  "name": "oss-publish-webpack-plugin",
+  "description": "a webpack(V3) plugin for publish vue project to aliyun oss",
+  "version": "0.1.0",
+  "email": "lxhfight1@gmail.com",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LXHFIGHT/oss-publish-webpack-plugin.git"
+  },
+  "keywords": [
+    "webpack",
+    "webpack-plugin",
+    "vue"
+  ],
+  "author": "LXHFIGHT",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LXHFIGHT/oss-publish-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/LXHFIGHT/oss-publish-webpack-plugin#readme",
+  "dependencies": {
+    "ali-oss": "^6.17.1",
+    "chalk": "^5.2.0",
+    "ora": "^6.1.2"
+  }
+}

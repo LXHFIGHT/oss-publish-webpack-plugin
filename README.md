@@ -41,11 +41,14 @@ module.exports = {
 | `provider` | 云计算运营商标识（详见下文 `provider` 介绍） | String | 'aliyun' |
 | `providerConfig` <strong style="color: red;">重要</strong> |运营商SDK对应工具方法的配置对象（详见下文 `providerConfig` 介绍）| Object | -- |
 | `clearPrefixList` |每次上传文件前需要清空存储桶中文件前缀，如果不传或空数组则代表不需要清空| Array | [] |
-| `autoPublish` | 是否无需命令行询问直接在编译后上传云端, true表示直接
+| `autoPublish` | 是否无需命令行询问直接在编译后上传云端, true表示直接上传，false则需要询问后发布 | Boolean | false|
 | `answer` | 当 `autoPublish` 为false时，定义发布前命令行询问后填写的正确回复选项，输入数组内任一值都允许发布 | Array | ['y','Y','yes'] |
 | `thread` | 定义最多支持同时执行的上传任务数，性能和网速越强，数额可以设置越大，建议取数在 1~10之间  | Number | 5 |
 
 ### provider介绍
+
+<br>
+
 |名称 | 标识 | 状态 |
 |:-- |:--|:-- |
 |阿里云 OSS | aliyun | V0.3.0 已支持 |
@@ -54,6 +57,9 @@ module.exports = {
 |亚马逊云 S3 | aws | 计划中 |
 
 ### providerConfig 详述
+
+<br>
+
 1. **阿里云 OSS** 对应的配置:
 ```JavaScript
 * region {String}: region填写Bucket所在地域。以华东1（杭州）为例，Region填写为oss-cn-hangzhou。  

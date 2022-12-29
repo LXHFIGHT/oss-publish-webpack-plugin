@@ -12,12 +12,8 @@ npm i --save-dev oss-publish-webpack-plugin
 ```
 
 ## Usage
-该插件可以帮助你在完成前端项目编译打包后，将 `dist` 目录中的内容发布到云计算运营商的对象存储桶中，目前支持列表如下：
-|版本|云服务商| 日期 |
-|:--|:--|:--|
-|v0.3.0 |阿里云OSS| 2022-12-27 |
-|v0.9.0 |七牛云kodo| 2022-12-28 |
-|v1.2.0 |腾讯云COS| 2022-12-29 |
+该插件可以帮助你在完成前端单页面应用项目在完成编译打包后，将 `dist` 目录中的内容发布到云计算运营商的对象存储桶（空间）中，点此 [查看](#support) 目前已支持的云计算运营商。
+
 
 ### webpack.config.js
 下面仅为示例代码，具体详细描述查看下文 [构造方法参数描述](#OPTIONS)
@@ -59,21 +55,21 @@ module.exports = {
 
 <br/>
 
-### provider 云计算运营商标识
+### <a id="support">provider 云计算运营商标识</a>
 
 <br>
 
-|运营商名称 | 标识 | 状态 |
-|:-- |:--|:-- |
-|阿里云 OSS | aliyun | V0.3.0 已支持 |
-|七牛云 Kodo | qiniu | V0.9.0 已支持 |
-|腾讯云 COS | tencent | 实现中 |
-|亚马逊云 S3 | aws | 计划中 |
-|华为云 OBS | huaweicloud | 计划中 |
+| 运营商名称 | 标识 | 状态 | 支持日期 |
+|:-- |:--|:--|:--|
+|阿里云 OSS | aliyun | V0.3.0 已支持 | 2022-12-27 |
+|七牛云 Kodo | qiniu | V0.9.0 已支持 | 2022-12-28 |
+|腾讯云 COS | tencent | v1.2.0 已支持 | 2022-12-29 |
+|亚马逊云 S3 | aws | 计划中 | -- |
+|华为云 OBS | huaweicloud | 计划中 | -- |
 
 <br/>
 
-### providerConfig 对象存储配置详述
+### <a id="OPTIONS">providerConfig 对象存储配置详述</a
 
 <br>
 

@@ -56,6 +56,8 @@ module.exports = {
 | `answer` | 当 `autoPublish` 为false时，定义发布前命令行询问后填写的正确回复选项，输入数组内任一值都允许发布 | Array | ['y','Y','yes'] |
 | `thread` | 定义最多支持同时执行的上传任务数，性能和网速越强，数额可以设置越大，建议取数在 1~10之间  | Number | 5 |
 
+<br/>
+
 ### provider 云计算运营商标识
 
 <br>
@@ -67,11 +69,13 @@ module.exports = {
 |腾讯云 COS | tencent | 计划中 |
 |亚马逊云 S3 | aws | 计划中 |
 
+<br/>
+
 ### providerConfig 对象存储配置详述
 
 <br>
 
-1. **阿里云 OSS** 对应的配置:
+1. **阿里云 OSS**:
 
 |参数名 | 类型 | 描述 |
 |:-- |:--|:-- |
@@ -80,7 +84,9 @@ module.exports = {
 |accessKeySecret | String | 阿里云账号的accessKeySecret |
 |bucket | String | 存储桶的名称 |
 
-2. **七牛云 Kodo** 对应的配置:
+<br/>
+
+2. **七牛云 Kodo**:
 
 |参数名 | 类型 | 描述 |
 |:-- |:--|:-- |

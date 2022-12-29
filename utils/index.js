@@ -1,5 +1,5 @@
-const AliyunUtils = require('./aliyun')
-const QiniuUtils = require('./qiniu')
+const AliyunUtils = require('../lib/aliyun')
+const QiniuUtils = require('../lib/qiniu')
 module.exports = {
   getUtils (provider, providerConfig = {}) {
     let utils = {}

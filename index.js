@@ -7,8 +7,8 @@ const path = require('path')
 const readline = require('readline')
 const chalk = require('chalk')
 const ora = require('ora')
-const utils = require('../utils')
-const config = require('./../config')
+const utils = require('./utils')
+const config = require('./config')
 
 class OSSPublishPlugin {
   queue = []

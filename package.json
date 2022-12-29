@@ -28,6 +28,7 @@
   "dependencies": {
     "ali-oss": "^6.17.1",
     "chalk": "^2.4.2",
+    "cos-nodejs-sdk-v5": "^2.11.19",
     "ora": "^1.2.0",
     "qiniu": "^7.8.0"
   }

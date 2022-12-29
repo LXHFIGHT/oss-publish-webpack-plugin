@@ -17,6 +17,7 @@ npm i --save-dev oss-publish-webpack-plugin
 |:--|:--|:--|
 |v0.3.0 |阿里云OSS| 2022-12-27 |
 |v0.9.0 |七牛云kodo| 2022-12-28 |
+|v1.2.0 |腾讯云COS| 2022-12-29 |
 
 ### webpack.config.js
 下面仅为示例代码，具体详细描述查看下文 [构造方法参数描述](#OPTIONS)
@@ -66,8 +67,9 @@ module.exports = {
 |:-- |:--|:-- |
 |阿里云 OSS | aliyun | V0.3.0 已支持 |
 |七牛云 Kodo | qiniu | V0.9.0 已支持 |
-|腾讯云 COS | tencent | 计划中 |
+|腾讯云 COS | tencent | 实现中 |
 |亚马逊云 S3 | aws | 计划中 |
+|华为云 OBS | huaweicloud | 计划中 |
 
 <br/>
 
@@ -75,7 +77,7 @@ module.exports = {
 
 <br>
 
-1. **阿里云 OSS**:
+1. **阿里云 OSS**
 
 |参数名 | 类型 | 描述 |
 |:-- |:--|:-- |
@@ -86,7 +88,7 @@ module.exports = {
 
 <br/>
 
-2. **七牛云 Kodo**:
+2. **七牛云 Kodo**
 
 |参数名 | 类型 | 描述 |
 |:-- |:--|:-- |
@@ -97,6 +99,17 @@ module.exports = {
 
 <br>
 
+3. **腾讯云 COS**
+
+|参数名 | 类型 | 描述 |
+|:-- |:--|:-- |
+|region | String | 腾讯云存储桶托管机房分布地区的地域标识，以广州为例，Region填写为ap-guangzhou，点击[查看公有云地域列表](https://cloud.tencent.com/document/product/436/6224#.E4.B8.AD.E5.9B.BD.E5.A4.A7.E9.99.86.E5.9C.B0.E5.9F.9F) |
+|secretId | String | 腾讯云账号的secretId |
+|secretKey | String | 腾讯云账号的secretKey |
+|bucket | String | 存储桶的名称 |
+
+<br>
+
 ## Guide
 
 ### 阿里云OSS存储桶配置引导
@@ -104,3 +117,7 @@ to be continue...
 
 ### 七牛云kodo存储桶配置引导
 to be continue...
+
+### 腾讯云COS存储桶配置引导
+* 查看腾讯云 [使用 COS 静态网站功能搭建前端单页应用](https://cloud.tencent.com/document/product/436/64575)
+* 查看搭建前端单页应用过程中的 [常见问题](https://cloud.tencent.com/document/product/436/64575#.E5.B8.B8.E8.A7.81.E9.97.AE.E9.A2.98)

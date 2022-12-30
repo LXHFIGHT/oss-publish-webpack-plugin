@@ -1,7 +1,7 @@
 {
   "name": "oss-publish-webpack-plugin",
   "description": "a webpack(V3/V4) plugin for publish vue project to Aliyun OSS and Qiniu Kodo.",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "email": "lxhfight1@gmail.com",
   "main": "index.js",
   "directories": {

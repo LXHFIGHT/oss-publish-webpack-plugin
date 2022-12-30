@@ -1,18 +1,20 @@
-<center>
+<div align="center">
   <h1>OSS Publish Webpack Plugin</h1>
-</center>
-<center>
-a webpack(V3/V4) plugin for publish vue project to Aliyun OSS and Qiniu Kodo.
-</center>
+  A webpack(V3/V4) plugin for publish vue project to <br> 
+  <a href="https://www.aliyun.com/product/oss?spm=5176.19720258.J_3207526240.37.e93976f4V5zG74">Aliyun OSS</a>, 
+  <a href="https://www.qiniu.com/products/kodo">Qiniu Kodo</a> 
+  and 
+  <a href="https://cloud.tencent.com/product/cos">TencentCloud COS.</a>
+</div>
 
-## Install
+<div align="center"><h2>Install</h2></div>
 
 ```shell
 npm i --save-dev oss-publish-webpack-plugin
 ```
+<div align="center"><h2>Usage</h2></div>
 
-## Usage
-该插件可以帮助你在完成前端单页面应用项目在完成编译打包后，将 `dist` 目录中的内容发布到云计算运营商的对象存储桶（空间）中，点此 [查看](#support) 目前已支持的云计算运营商。
+该插件可以帮助你在完成前端单页面应用项目在完成编译打包后，将 `dist` 目录中的内容发布到云计算运营商的对象存储桶（空间）中，点此 [查看](#support) 目前已支持（和计划支持）的云计算运营商情况。
 
 
 ### webpack.config.js
@@ -41,7 +43,12 @@ module.exports = {
 }
 ```
 
-## <a id="OPTIONS">Options</a>
+<div align="center">
+  <h2>
+    <a id="OPTIONS">Options</a>
+  </h2>
+</div>
+
 以下具体介绍 `oss-publish-webpack-plugin` 支持的构造方法参数
 
 |参数名 | 描述 |类型 | 默认值 |
@@ -55,7 +62,7 @@ module.exports = {
 
 <br/>
 
-### <a id="support">provider 云计算运营商标识</a>
+### <a id="support">provider 云计算运营商标识 </a>
 
 <br>
 
@@ -69,7 +76,7 @@ module.exports = {
 
 <br/>
 
-### <a id="OPTIONS">providerConfig 对象存储配置详述</a
+### providerConfig 对象存储配置详述
 
 <br>
 
@@ -106,13 +113,13 @@ module.exports = {
 
 <br>
 
-## Guide
+<div align="center"><h2>Guide</h2></div>
 
 ### 阿里云OSS存储桶配置引导
-to be continue...
+* 查看阿里云 [教程示例：通过静态网站托管部署单页应用](https://help.aliyun.com/document_detail/396285.html)
 
 ### 七牛云kodo存储桶配置引导
-to be continue...
+* 查看七牛云 [静态页面管理](https://developer.qiniu.com/kodo/8604/a-static-page-management) 引导说明  【温馨提示：本插件会将编译打包后的 `dist` 目录中 `index.html` 文件复制出一个新的文件并命名为 `errno-404`，同时会一并上传到七牛云存储空间，不需要开发者再单独操作】
 
 ### 腾讯云COS存储桶配置引导
 * 查看腾讯云 [使用 COS 静态网站功能搭建前端单页应用](https://cloud.tencent.com/document/product/436/64575)

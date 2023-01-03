@@ -17,12 +17,11 @@ npm i --save-dev oss-publish-webpack-plugin
 该插件可以帮助你在完成前端单页面应用项目在完成编译打包后，将 `dist` 目录中的内容发布到云计算运营商的对象存储桶（空间）中，点此 [查看](#support) 目前已支持（和计划支持）的云计算运营商情况。
 
 
-### webpack.config.js
+### 1. webpack.config.js 配置
 下面仅为示例代码，具体详细描述查看下文 [构造方法参数描述](#OPTIONS)
 
 ```javascript
 const OSSPublishPlugin = require('oss-publish-webpack-plugin')
-
 module.exports = {
   // ......
   plugins: [
@@ -42,6 +41,27 @@ module.exports = {
   ]
 }
 ```
+### 2. vue.config.js 配置（基于 [webpack-chain](https://github.com/neutrinojs/webpack-chain) ）
+
+下面仅为示例代码，具体详细描述查看下文 [构造方法参数描述](#OPTIONS)
+
+```javascript
+const OSSPublishPlugin = require('oss-publish-webpack-plugin')
+module.exports = {
+  // ......
+  chainWebpack: config => {
+    // ......其他 config 定义逻辑, 
+    // Tips: chain-webpack模式支持通过逻辑代码根据当前环境使用对应的发布配置
+    config.plugin('oss-plugin').use(OSSPublishPlugin, [{ 
+      provider: 'qiniu',
+      providerConfig:  { /** ...同上 */ },
+      autoPublish: true,
+      clearPrefixList: ['static/css', 'static/js', 'static/img']
+    }])
+  }
+}
+```
+
 
 <div align="center">
   <h2>

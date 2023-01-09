@@ -6,10 +6,10 @@ module.exports = {
   getUtils (provider, providerConfig = {}) {
     let utils = {}
     switch (provider) {
-      case 'aliyun': utils = new AliyunUtils({ providerConfig }); break
-      case 'qiniu': utils = new QiniuUtils({ providerConfig }); break
-      case 'tencent': utils = new TencentUtils({ providerConfig }); break
-      default: utils = new AliyunUtils({ providerConfig })
+      case 'aliyun': utils = new AliyunUtils({ providerConfig, provider }); break
+      case 'qiniu': utils = new QiniuUtils({ providerConfig, provider }); break
+      case 'tencent': utils = new TencentUtils({ providerConfig, provider }); break
+      default: utils = new AliyunUtils({ providerConfig, provider })
     }
     return utils
   },

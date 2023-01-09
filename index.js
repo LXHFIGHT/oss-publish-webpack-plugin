@@ -21,6 +21,7 @@ class OSSPublishPlugin {
   duration = 0 // 轮训查看任务队列的时间间隔(单位：毫秒)
   clearPrefixList = [] // 每次发版前需要清空存储桶文件的前缀，如果传空则表示不需要清空
   utils = {} // 对应云服务商的工具方法
+  provider = '' // 对应云服务商名称标识
   /** 
    * @param {String} options.provider 云服务提供商，目前仅支持：阿里云 aliyun (默认) 和 七牛云 qiniu 
    * @param {Object} options.providerConfig 云服务提供商工具方法对象参数
@@ -32,9 +33,9 @@ class OSSPublishPlugin {
     this.thread = options.thread || 5
     this.duration = options.duration || 10
     this.clearPrefixList = options.clearPrefixList || []
-    const provider = options.provider && config.providers.includes(options.provider) ? options.provider : 'aliyun'
+    this.provider = options.provider && Object.keys(config.providers).includes(options.provider) ? options.provider : 'aliyun'
     const providerConfig = options.ossConfig || options.providerConfig || null // ossConfig 为早期版本支持， 后续改为 providerConfig
-    this.utils = utils.getUtils(provider, providerConfig) // 生成对应云服务商的工具方法对象
+    this.utils = utils.getUtils(this.provider, providerConfig) // 生成对应云服务商的工具方法对象
   }
   apply (compiler) {
     const _execute = complication => {
@@ -95,6 +96,10 @@ class OSSPublishPlugin {
     let failCount = 0
     const startTime = Date.now()
     const spinner = ora(`正在上传文件到云端....`)
+    const _getProviderName = () => {
+      const providerInfo = config.providers[this.provider]
+      return providerInfo ? providerInfo.name : '--'
+    }
     spinner.start()
     let timer = setInterval(() => {
       if (this.isUploading >= this.thread) {
@@ -120,12 +125,12 @@ class OSSPublishPlugin {
           clearInterval(timer)
           spinner.stop()
           console.log(`
-=======================================================
+==========================================================
           
-          已完成本次同步，成功${chalk.green(successCount)}个，失败${chalk.red(failCount)}个
+          已上传至${_getProviderName()}，成功${chalk.green(successCount)}个，失败${chalk.red(failCount)}个
           发布文件共耗时 ${chalk.green(parseFloat((Date.now() - startTime) / 1000))} 秒 :)
           
-=======================================================\n`)
+==========================================================\n`)
           !this.autoPublish && process.exit()
         }
       }

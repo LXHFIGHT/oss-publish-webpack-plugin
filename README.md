@@ -92,7 +92,7 @@ module.exports = {
 |七牛云 Kodo | qiniu | V0.9.0 已支持 | 2022-12-28 |
 |腾讯云 COS | tencent | v1.2.0 已支持 | 2022-12-29 |
 |亚马逊云 S3 | aws | 计划中 | -- |
-|华为云 OBS | huaweicloud | 计划中 | -- |
+|华为云 OBS | huaweicloud | v1.4.0 已支持 | 2023-01-16 |
 
 <br/>
 
@@ -133,6 +133,17 @@ module.exports = {
 
 <br>
 
+4. **华为云 OBS**
+
+|参数名 | 类型 | 描述 |
+|:-- |:--|:-- |
+|server | String | 华为云存储桶地域标识（EndPoint），在存储桶 -> 概览 -> 基本信息 中即可查到 EndPoint |
+|access_key_id | String | 华为云账号的访问密钥ID |
+|secret_access_key | String | 华为云账号的访问密钥 |
+|bucket | String | 存储桶的名称 |
+
+<br>
+
 <div align="center"><h2>Guide</h2></div>
 
 ### 阿里云OSS存储桶配置引导
@@ -144,3 +155,8 @@ module.exports = {
 ### 腾讯云COS存储桶配置引导
 * 查看腾讯云 [使用 COS 静态网站功能搭建前端单页应用](https://cloud.tencent.com/document/product/436/64575)
 * 查看搭建前端单页应用过程中的 [常见问题](https://cloud.tencent.com/document/product/436/64575#.E5.B8.B8.E8.A7.81.E9.97.AE.E9.A2.98)
+
+### 华为云OBS存储桶配置引导
+* 查看华为云 [使用自定义域名托管静态网站最佳实践](https://support.huaweicloud.com/bestpractice-obs/obs_05_0610.html)
+* 注意：默认404错误页面这里需要也配置为： `index.html`
+![](https://support.huaweicloud.com/bestpractice-obs/zh-cn_image_0000001345671781.png)

@@ -20,7 +20,7 @@ module.exports = {
     },
     huaweicloud: {
       name: '华为云',
-      requiredKeys: []
+      requiredKeys: ['access_key_id', 'secret_access_key', 'server', 'bucket']
     }
   }
 }

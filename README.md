@@ -91,7 +91,7 @@ module.exports = {
 |阿里云 OSS | aliyun | V0.3.0 已支持 | 2022-12-27 |
 |七牛云 Kodo | qiniu | V0.9.0 已支持 | 2022-12-28 |
 |腾讯云 COS | tencent | v1.2.0 已支持 | 2022-12-29 |
-|亚马逊云 S3 | aws | 计划中 | -- |
+|亚马逊云 S3 | aws | v1.5.0 BETA | 2023-01-17 |
 |华为云 OBS | huaweicloud | v1.4.0 已支持 | 2023-01-16 |
 
 <br/>
@@ -144,6 +144,17 @@ module.exports = {
 
 <br>
 
+5. **AWS S3**
+
+|参数名 | 类型 | 描述 |
+|:-- |:--|:-- |
+|region | String | 亚马逊云存储空间服务所在地域标识（EndPoint），点此[查看AWS服务端点列表](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) |
+|accessKeyId | String | 亚马逊云账号的访问密钥ID |
+|secretAccessKey | String | 亚马逊云账号的访问密钥 |
+|bucket | String | 存储桶的名称 |
+
+<br>
+
 <div align="center"><h2>Guide</h2></div>
 
 ### 阿里云OSS存储桶配置引导
@@ -160,3 +171,6 @@ module.exports = {
 * 查看华为云 [使用自定义域名托管静态网站最佳实践](https://support.huaweicloud.com/bestpractice-obs/obs_05_0610.html)
 * 注意：默认404错误页面这里需要也配置为： `index.html`
 ![](https://support.huaweicloud.com/bestpractice-obs/zh-cn_image_0000001345671781.png)
+
+### 亚马逊云 S3 存储桶配置引导
+验证中，后续补充...

@@ -3,6 +3,7 @@ const AliyunUtils = require('../lib/aliyun')
 const QiniuUtils = require('../lib/qiniu')
 const TencentUtils = require('../lib/tencent')
 const HuaweiCloudUtils = require('../lib/huaweiCloud')
+const AWSUtils = require('../lib/aws')
 module.exports = {
   getUtils (provider, providerConfig = {}) {
     let utils = {}
@@ -11,6 +12,7 @@ module.exports = {
       case 'qiniu': utils = new QiniuUtils({ providerConfig, provider }); break
       case 'tencent': utils = new TencentUtils({ providerConfig, provider }); break
       case 'huaweicloud': utils = new HuaweiCloudUtils({ providerConfig, provider }); break
+      case 'aws': utils = new AWSUtils({ providerConfig, provider }); break
       default: utils = new AliyunUtils({ providerConfig, provider })
     }
     return utils

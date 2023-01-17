@@ -14,13 +14,13 @@ module.exports = {
       name: '腾讯云',
       requiredKeys: ['region', 'secretId', 'secretKey', 'bucket']
     },
-    aws: {
-      name: '亚马逊云',
-      requiredKeys: []
-    },
     huaweicloud: {
       name: '华为云',
-      requiredKeys: ['access_key_id', 'secret_access_key', 'server', 'bucket']
+      requiredKeys: ['server', 'access_key_id', 'secret_access_key', 'bucket']
+    },
+    aws: {
+      name: '亚马逊云',
+      requiredKeys: ['region', 'accessKeyId', 'secretAccessKey', 'bucket']
     }
   }
 }

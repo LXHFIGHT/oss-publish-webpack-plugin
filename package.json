@@ -8,7 +8,8 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "./test-webpack-plugin.sh"
+    "test": "./test-webpack-plugin.sh",
+    "test-tools": "node ./test/utils/index.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
   },
   "homepage": "https://github.com/LXHFIGHT/oss-publish-webpack-plugin#readme",
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.245.0",
     "ali-oss": "^6.17.1",
     "chalk": "^2.4.2",
     "cos-nodejs-sdk-v5": "^2.11.19",

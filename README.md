@@ -88,11 +88,11 @@ module.exports = {
 
 | 运营商名称 | 标识 | 状态 | 支持日期 |
 |:-- |:--|:--|:--|
-|阿里云 OSS | aliyun | V0.3.0 已支持 | 2022-12-27 |
-|七牛云 Kodo | qiniu | V0.9.0 已支持 | 2022-12-28 |
-|腾讯云 COS | tencent | v1.2.0 已支持 | 2022-12-29 |
-|亚马逊云 S3 | aws | v1.5.0 BETA | 2023-01-17 |
-|华为云 OBS | huaweicloud | v1.4.0 已支持 | 2023-01-16 |
+|[阿里云 OSS](#aliyun) | aliyun | V0.3.0 已支持 | 2022-12-27 |
+|[七牛云 Kodo](#qiniu) | qiniu | V0.9.0 已支持 | 2022-12-28 |
+|[腾讯云 COS](#tencent) | tencent | v1.2.0 已支持 | 2022-12-29 |
+|[华为云 OBS](#huaweicloud) | huaweicloud | v1.4.0 已支持 | 2023-01-16 |
+|[亚马逊云 S3](#aws) | aws | v1.5.0 BETA | 2023-01-17 |
 
 <br/>
 
@@ -100,7 +100,7 @@ module.exports = {
 
 <br>
 
-1. **阿里云 OSS**
+1. <a id="aliyun">**阿里云 OSS**</a>
 
 |参数名 | 类型 | 描述 |
 |:-- |:--|:-- |
@@ -111,7 +111,7 @@ module.exports = {
 
 <br/>
 
-2. **七牛云 Kodo**
+2. <a id="qiniu">**七牛云 Kodo**</a>
 
 |参数名 | 类型 | 描述 |
 |:-- |:--|:-- |
@@ -122,7 +122,7 @@ module.exports = {
 
 <br>
 
-3. **腾讯云 COS**
+3. <a id="tencent">**腾讯云 COS**</a>
 
 |参数名 | 类型 | 描述 |
 |:-- |:--|:-- |
@@ -133,7 +133,7 @@ module.exports = {
 
 <br>
 
-4. **华为云 OBS**
+4. <a id="huaweicloud">**华为云 OBS**</a>
 
 |参数名 | 类型 | 描述 |
 |:-- |:--|:-- |
@@ -144,7 +144,7 @@ module.exports = {
 
 <br>
 
-5. **AWS S3**
+5. <a id="aws">**AWS S3**</a>
 
 |参数名 | 类型 | 描述 |
 |:-- |:--|:-- |
